@@ -38,6 +38,5 @@ os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "your-service-account.json"
 
 **5. Install required packages:**
 
-**```bash**
 pip install google-cloud-vision google-cloud-translate google-cloud-texttospeech google-cloud-speech pydub vertexai
 **```**
