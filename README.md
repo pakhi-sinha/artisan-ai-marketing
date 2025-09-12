@@ -36,4 +36,8 @@ The pipeline demonstrates a fully Google Cloud–based solution for artisans to 
 import os
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "your-service-account.json"
 
-5. **Install required packages** : pip install google-cloud-vision google-cloud-translate google-cloud-texttospeech google-cloud-speech pydub vertexai
+**5. Install required packages:**
+
+**```bash**
+pip install google-cloud-vision google-cloud-translate google-cloud-texttospeech google-cloud-speech pydub vertexai
+**```**
