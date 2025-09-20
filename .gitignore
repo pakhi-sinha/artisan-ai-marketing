@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual Environment
+my-new-venv/
+venv/
+env/
+
+# Sensitive Files - DO NOT COMMIT YOUR KEY FILE
+*.json
+.env

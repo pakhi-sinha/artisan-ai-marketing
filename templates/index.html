@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artisan AI Project</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="welcomeScreen" class="welcome-screen">
+        <h1 class="welcome-heading">Welcome to Artisan AI ✨</h1>
+        <p class="welcome-subheading">Your creative partner for handmade crafts.</p>
+    </div>
+
+    <div id="mainContent" class="container hidden">
+        <header class="fade-in">
+            <h1>✨ Artisan AI: Craft Description Generator ✨</h1>
+            <p>Upload a photo of your handmade craft to get a professional marketing description.</p>
+        </header>
+
+        <form id="uploadForm" class="form-section fade-in">
+            <div class="file-input-wrapper">
+                <label for="fileInput" class="custom-file-upload">Choose File</label>
+                <input type="file" name="image" id="fileInput" required>
+                <span id="fileNameDisplay" class="file-name-display">No file chosen</span>
+            </div>
+            <button type="submit" class="animated-button" id="analyzeButton">
+                <span>Analyze Craft</span>
+            </button>
+        </form>
+        
+        <div id="imagePreview" class="image-preview hidden">
+            <img src="#" alt="Image Preview">
+        </div>
+
+        <div id="results" class="results-section fade-in">
+            <p id="analyzationSuccessMessage" class="hidden success-message">Analyzation successful! ✨</p>
+            <p id="loadingMessage" class="hidden loading-animation">Analyzing your craft... ⏳</p>
+            <p id="errorMessage" class="hidden error-message"></p>
+            <div id="descriptionOutput" class="hidden">
+                <h3>AI-Generated Description:</h3>
+                <p id="descriptionText" class="description-text"></p>
+                <button id="copyButton" class="animated-button copy-button">
+                    <span>Copy Description</span>
+                </button>
+                
+                <div class="translation-buttons">
+                    <button id="translateHindiBtn" class="animated-button">
+                        <span>Translate to Hindi</span>
+                    </button>
+                    <button id="translateBengaliBtn" class="animated-button">
+                        <span>Translate to Bengali</span>
+                    </button>
+                    <button id="translateEnglishBtn" class="animated-button">
+                        <span>Translate to English</span>
+                    </button>
+                </div>
+
+                <div class="tts-section">
+                    <button id="speakBtn" class="animated-button">
+                        <span>Read Aloud</span>
+                    </button>
+                    <button id="stopAudioBtn" class="animated-button stop-button">
+                        <span>Stop Audio</span>
+                    </button>
+                    <div class="speaking-rate-control">
+                        <label for="speakingRate">Speed:</label>
+                        <input type="range" id="speakingRate" name="speakingRate" min="0.5" max="2.0" step="0.25" value="1.0">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
